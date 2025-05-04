@@ -245,7 +245,7 @@
                 'nav-contact': 'Contacto',
                 
                 // Hero
-                'hero-title': 'Hola, soy <span>Tu Nombre</span>',
+                'hero-title': 'Hola, soy <span>Esteban :)</span>',
                 'hero-subtitle': 'Desarrollador & Diseñador',
                 'hero-description': 'Transformando ideas en experiencias digitales excepcionales.',
                 'hero-btn-blog': 'Ver Blog',
