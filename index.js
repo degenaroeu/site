@@ -246,7 +246,7 @@
                 
                 // Hero
                 'hero-title': 'Hola, soy <span>Esteban :)</span>',
-                'hero-subtitle': 'Desarrollador & Diseñador',
+                'hero-subtitle': 'Cloud Engineer & Web Developer',
                 'hero-description': 'Transformando ideas en experiencias digitales excepcionales.',
                 'hero-btn-blog': 'Ver Blog',
                 'hero-btn-contact': 'Contactar',
