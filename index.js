@@ -485,7 +485,7 @@ function navigateTo(page) {
       "post3-title": "Il Futuro dello Sviluppo Web con l'IA",
       "post3-date": "15 Aprile, 2025",
       "post3-category": "Categoria: Tecnologia",
-      "post3-author": "Di: Il Tuo Nome",
+      "post2-author": "Di: Il Tuo Nome",
       "post3-excerpt":
         "L'intelligenza artificiale sta trasformando il modo in cui creiamo siti web. Esplora come gli strumenti di IA stanno rivoluzionando lo sviluppo web...",
       "post3-content-intro":
@@ -617,7 +617,7 @@ function navigateTo(page) {
       "post3-title": "The Future of Web Development with AI",
       "post3-date": "April 15, 2025",
       "post3-category": "Category: Technology",
-      "post3-author": "By: Your Name",
+      "post2-author": "By: Your Name",
       "post3-excerpt":
         "Artificial intelligence is transforming how we create websites. Explore how AI-powered tools are revolutionizing web development...",
       "post3-content-intro":
@@ -643,181 +643,73 @@ function navigateTo(page) {
   
   // Función para cambiar el idioma
   function changeLanguage(lang) {
-    console.log("Cambiando idioma a:", lang)
-    // Guardar preferencia de idioma
     localStorage.setItem("preferredLanguage", lang)
+    document.documentElement.setAttribute("lang", lang)
   
-    // Actualizar botones de idioma
-    document.querySelectorAll(".language-btn").forEach((btn) => {
-      btn.classList.remove("active")
-      if (btn.getAttribute("data-lang") === lang) {
-        btn.classList.add("active")
-      }
-    })
-  
-    // Actualizar textos de navegación
-    document.querySelectorAll(".nav-link").forEach((link) => {
-      const key = link.getAttribute("data-page")
-      link.textContent = translations[lang][`nav-${key}`]
-    })
-  
-    // Actualizar textos del hero
-    document.querySelector(".hero-title").innerHTML = translations[lang]["hero-title"]
-    document.querySelector(".hero-subtitle").textContent = translations[lang]["hero-subtitle"]
-    document.querySelector(".hero-content p:not(.hero-subtitle)").textContent = translations[lang]["hero-description"]
-    document.querySelector(".hero-buttons .btn-primary").textContent = translations[lang]["hero-btn-blog"]
-    document.querySelector(".hero-buttons .btn-secondary").textContent = translations[lang]["hero-btn-contact"]
-  
-    // Actualizar sección Sobre Mí
-    document.querySelector("#about .section-title").textContent = translations[lang]["about-title"]
-    document.querySelector(".about-content h3").textContent = translations[lang]["about-subtitle"]
-    const aboutParagraphs = document.querySelectorAll(".about-content p")
-    if (aboutParagraphs.length >= 3) {
-      aboutParagraphs[0].textContent = translations[lang]["about-p1"]
-      aboutParagraphs[1].textContent = translations[lang]["about-p2"]
-      aboutParagraphs[2].textContent = translations[lang]["about-p3"]
-    }
-  
-    // Actualizar sección Blog
-    document.querySelector("#blog-preview .section-title").textContent = translations[lang]["blog-title"]
-    document.querySelectorAll(".blog-link").forEach((link) => {
-      link.textContent = translations[lang]["blog-read-more"]
-    })
-    document.querySelector("#blog-preview .btn-secondary").textContent = translations[lang]["blog-btn-all"]
-  
-    // Actualizar todas las tarjetas de blog en la página de archivo
-    const archiveCards = document.querySelectorAll("#blog-page .blog-card")
-    archiveCards.forEach((card, index) => {
-      const postNum = index + 1
-      if (postNum <= 6) {
-        // Tenemos 6 posts en el archivo
-        const title = card.querySelector(".blog-title")
-        const excerpt = card.querySelector(".blog-excerpt")
-        const readMore = card.querySelector(".blog-link")
-  
-        if (title && translations[lang][`post${postNum}-title`])
-          title.textContent = translations[lang][`post${postNum}-title`]
-        if (excerpt && translations[lang][`post${postNum}-excerpt`])
-          excerpt.textContent = translations[lang][`post${postNum}-excerpt`]
-        if (readMore) readMore.textContent = translations[lang]["blog-read-more"]
-      }
-    })
-  
-    // Actualizar sección Contacto
-    document.querySelector("#contact .section-title").textContent = translations[lang]["contact-title"]
-    document.querySelectorAll(".contact-text h4")[0].textContent = translations[lang]["contact-email"]
-    document.querySelectorAll(".contact-text h4")[1].textContent = translations[lang]["contact-phone"]
-    document.querySelectorAll(".contact-text h4")[2].textContent = translations[lang]["contact-location"]
-  
-    // Actualizar formulario de contacto
-    document.querySelector('#contactForm input[type="text"]').placeholder = translations[lang]["contact-form-name"]
-    document.querySelector('#contactForm input[type="email"]').placeholder = translations[lang]["contact-form-email"]
-    document.querySelector("#contactForm textarea").placeholder = translations[lang]["contact-form-message"]
-    document.querySelector("#contactForm button").textContent = translations[lang]["contact-form-submit"]
-  
-    // Actualizar footer
-    document.querySelectorAll(".footer-bottom p")[0].textContent = translations[lang]["footer-rights"]
-    document.querySelectorAll(".footer-bottom p")[1].textContent = translations[lang]["footer-designed"]
-  
-    // Actualizar página de blog
-    if (document.querySelector(".archive-title")) {
-      document.querySelector(".archive-title").textContent = translations[lang]["blog-archive-title"]
-      document.querySelector(".archive-description").textContent = translations[lang]["blog-archive-description"]
-  
-      // Actualizar filtros
-      const filterButtons = document.querySelectorAll(".filter-btn")
-      filterButtons[0].textContent = translations[lang]["blog-filter-all"]
-      filterButtons[1].textContent = translations[lang]["blog-filter-design"]
-      filterButtons[2].textContent = translations[lang]["blog-filter-development"]
-      filterButtons[3].textContent = translations[lang]["blog-filter-technology"]
-    }
-  
-    // Actualizar navegación de posts
-    document.querySelectorAll(".post-nav-link.prev").forEach((link) => {
-      link.textContent = translations[lang]["blog-prev"]
-    })
-    document.querySelectorAll(".post-nav-link.next").forEach((link) => {
-      link.textContent = translations[lang]["blog-next"]
-    })
-  
-    // Actualizar títulos de artículos relacionados
-    document.querySelectorAll(".related-posts h3").forEach((title) => {
-      title.textContent = translations[lang]["blog-related"]
-    })
-  
-    // Actualizar tarjetas de blog en la página principal
-    document.querySelectorAll(".blog-card").forEach((card, index) => {
-      const postNum = index + 1
-      if (postNum <= 3) {
-        // Solo tenemos 3 posts principales
-        const title = card.querySelector(".blog-title")
-        const date = card.querySelector(".blog-date")
-        const excerpt = card.querySelector(".blog-excerpt")
-        const readMore = card.querySelector(".blog-link")
-  
-        if (title) title.textContent = translations[lang][`post${postNum}-title`]
-        if (date) date.textContent = translations[lang][`post${postNum}-date`]
-        if (excerpt) excerpt.textContent = translations[lang][`post${postNum}-excerpt`]
-        if (readMore) readMore.textContent = translations[lang]["blog-read-more"]
-      }
-    })
-  
-    // Actualizar páginas de blog individuales
-    for (let i = 1; i <= 3; i++) {
-      const postPage = document.getElementById(`post${i}-page`)
-      if (postPage) {
-        const title = postPage.querySelector(".post-title")
-        const date = postPage.querySelector(".post-meta span:nth-child(1)")
-        const category = postPage.querySelector(".post-meta span:nth-child(2)")
-        const author = postPage.querySelector(".post-meta span:nth-child(3)")
-  
-        if (title) title.textContent = translations[lang][`post${i}-title`]
-        if (date) date.textContent = translations[lang][`post${i}-date`]
-        if (category) category.textContent = translations[lang][`post${i}-category`]
-        if (author) author.textContent = translations[lang][`post${i}-author`]
-  
-        // Actualizar contenido del artículo
-        const contentIntro = postPage.querySelector(".post-content p:first-child")
-        if (contentIntro) contentIntro.textContent = translations[lang][`post${i}-content-intro`]
-  
-        // Actualizar encabezados y párrafos
-        const headings = postPage.querySelectorAll(".post-content h2")
-        const paragraphs = postPage.querySelectorAll(".post-content p:not(:first-child)")
-  
-        headings.forEach((heading, index) => {
-          if (translations[lang][`post${i}-heading${index + 1}`]) {
-            heading.textContent = translations[lang][`post${i}-heading${index + 1}`]
-          } else if (index === headings.length - 1 && translations[lang][`post${i}-heading-conclusion`]) {
-            heading.textContent = translations[lang][`post${i}-heading-conclusion`]
-          }
-        })
-  
-        // Actualizar párrafos que siguen a los encabezados
-        const paragraphIndex = 0
-        headings.forEach((heading, index) => {
-          // Encontrar el siguiente párrafo después de este encabezado
-          let nextParagraph = heading.nextElementSibling
-          while (nextParagraph && nextParagraph.tagName !== "P" && nextParagraph.tagName !== "UL") {
-            nextParagraph = nextParagraph.nextElementSibling
-          }
-  
-          if (nextParagraph && nextParagraph.tagName === "P") {
-            if (index === headings.length - 1 && translations[lang][`post${i}-conclusion`]) {
-              nextParagraph.textContent = translations[lang][`post${i}-conclusion`]
-            } else if (translations[lang][`post${i}-content${index + 1}`]) {
-              nextParagraph.textContent = translations[lang][`post${i}-content${index + 1}`]
-            }
-          }
-        })
-      }
+    // Actualizar textos
+    for (const key in translations[lang]) {
+      const elements = document.querySelectorAll(`[data-i18n="${key}"]`)
+      elements.forEach((el) => {
+        if (el.tagName === "INPUT" && (el.type === "text" || el.type === "email" || el.type === "tel")) {
+          el.placeholder = translations[lang][key]
+        } else if (el.tagName === "INPUT" && el.type === "submit") {
+          el.value = translations[lang][key]
+        } else {
+          el.innerHTML = translations[lang][key]
+        }
+      })
     }
   }
+  
+  // Añadir este código justo antes de la línea "// Inicializar selector de idiomas"
+  
+  // Función para forzar la actualización de todos los textos
+  function forceLanguageUpdate() {
+    const currentLang = localStorage.getItem("preferredLanguage") || "es"
+    console.log("Forzando actualización de idioma:", currentLang)
+  
+    // Pequeño retraso para asegurar que el DOM esté completamente cargado
+    setTimeout(() => {
+      changeLanguage(currentLang)
+    }, 100)
+  }
+  
+  // Añadir evento para actualizar el idioma cuando se cambia de página
+  document.addEventListener("click", (e) => {
+    // Si el clic fue en un enlace de navegación o en un botón de blog
+    if (
+      e.target.closest(".nav-link") ||
+      e.target.closest(".blog-link") ||
+      e.target.closest(".post-nav-link") ||
+      e.target.closest(".btn-primary") ||
+      e.target.closest(".btn-secondary")
+    ) {
+      // Esperar a que se complete la navegación y luego actualizar el idioma
+      setTimeout(forceLanguageUpdate, 300)
+    }
+  })
+  
+  // Actualizar el idioma cuando se carga una página
+  window.addEventListener("load", forceLanguageUpdate)
   
   // Inicializar selector de idiomas
   document.querySelectorAll(".language-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const lang = btn.getAttribute("data-lang")
-      changeLanguage(lang)
+      console.log("Botón de idioma clickeado:", lang)
+  
+      // Desactivar todos los botones primero
+      document.querySelectorAll(".language-btn").forEach((b) => {
+        b.classList.remove("active")
+      })
+  
+      // Activar el botón seleccionado
+      btn.classList.add("active")
+  
+      // Cambiar el idioma con un pequeño retraso para asegurar que la UI se actualice
+      setTimeout(() => {
+        changeLanguage(lang)
+      }, 50)
     })
   })
   
