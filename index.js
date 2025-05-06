@@ -272,47 +272,47 @@ function navigateTo(page) {
       blogReadMore: "Leer más",
       blogArchiveTitle: "Mi Blog",
       blogArchiveDescription:
-        "Comparto mis pensamientos, experiencias y conocimientos sobre desarrollo web, diseño y tecnología.",
+        "Comparto mis pensamientos, experiencias y conocimientos sobre cloud computing, infraestructura y tecnologías emergentes.",
       blogFilterAll: "Todos",
-      blogFilterDesign: "Diseño",
-      blogFilterDevelopment: "Desarrollo",
-      blogFilterTechnology: "Tecnología",
+      blogFilterCloud: "Cloud",
+      blogFilterDevOps: "DevOps",
+      blogFilterAI: "IA",
       blogPrev: "← Artículo anterior",
       blogNext: "Artículo siguiente →",
       blogRelated: "Artículos relacionados",
   
       // Contacto
       contactTitle: "Contacto",
-      contactFormName: "Tu Nombre",
-      contactFormEmail: "Tu Email",
-      contactFormMessage: "Tu Mensaje",
+      contactFormName: "Nombre",
+      contactFormEmail: "Email",
+      contactFormMessage: "Mensaje",
       contactFormSubmit: "Enviar Mensaje",
   
       // Footer
-      footerRights: "© 2025 Tu Nombre - Todos los derechos reservados",
+      footerRights: "© 2025 Esteban De Genaro - Todos los derechos reservados",
       footerDesigned: "Diseñado con ❤️ por Esteban",
   
       // Blog Posts
-      post1Title: "Tendencias de Diseño Web para 2025",
+      post1Title: "Arquitectura Multi-Cloud: Estrategias para 2025",
       post1Date: "4 Mayo, 2025",
-      post1Category: "Categoría: Diseño",
-      post1Author: "Por: Tu Nombre",
+      post1Category: "Categoría: Cloud",
+      post1Author: "Por: Esteban",
       post1Excerpt:
-        "Descubre las últimas tendencias en diseño web que están revolucionando la industria este año. Desde diseños minimalistas hasta experiencias inmersivas...",
+        "Descubre las mejores prácticas para implementar arquitecturas multi-cloud que aprovechan las fortalezas de AWS, Azure y GCP. Estrategias para optimizar costos y rendimiento...",
   
-      post2Title: "Cómo Optimizar el Rendimiento de tu Sitio Web",
+      post2Title: "Terraform: Infraestructura como Código en la Práctica",
       post2Date: "28 Abril, 2025",
-      post2Category: "Categoría: Desarrollo",
-      post2Author: "Por: Tu Nombre",
+      post2Category: "Categoría: DevOps",
+      post2Author: "Por: Esteban",
       post2Excerpt:
-        "La velocidad de carga es crucial para la experiencia del usuario y el SEO. En este artículo, comparto técnicas efectivas para mejorar el rendimiento de tu sitio...",
+        "La gestión de infraestructura como código se ha vuelto esencial. En este artículo, comparto técnicas avanzadas para Terraform y cómo implementar CI/CD para tu infraestructura...",
   
-      post3Title: "El Futuro del Desarrollo Web con IA",
+      post3Title: "IA en la Nube: Transformando Operaciones IT",
       post3Date: "15 Abril, 2025",
-      post3Category: "Categoría: Tecnología",
-      post3Author: "Por: Tu Nombre",
+      post3Category: "Categoría: IA",
+      post3Author: "Por: Esteban",
       post3Excerpt:
-        "La inteligencia artificial está transformando la forma en que creamos sitios web. Explora cómo las herramientas de IA están revolucionando el desarrollo web...",
+        "La inteligencia artificial está revolucionando la gestión de infraestructuras cloud. Explora cómo los servicios de IA de AWS, Azure y GCP están optimizando operaciones...",
     },
     it: {
       // Navigazione
@@ -342,47 +342,47 @@ function navigateTo(page) {
       blogBtnAll: "Vedi tutti gli articoli",
       blogReadMore: "Leggi di più",
       blogArchiveTitle: "Il Mio Blog",
-      blogArchiveDescription: "Condivido i miei pensieri, esperienze e conoscenze su sviluppo web, design e tecnologia.",
+      blogArchiveDescription: "Condivido i miei pensieri, esperienze e conoscenze su cloud computing, infrastruttura e tecnologie emergenti.",
       blogFilterAll: "Tutti",
-      blogFilterDesign: "Design",
-      blogFilterDevelopment: "Sviluppo",
-      blogFilterTechnology: "Tecnologia",
+      blogFilterCloud: "Cloud",
+      blogFilterDevOps: "DevOps",
+      blogFilterAI: "IA",
       blogPrev: "← Articolo precedente",
       blogNext: "Articolo successivo →",
       blogRelated: "Articoli correlati",
   
       // Contatti
       contactTitle: "Contatti",
-      contactFormName: "Il Tuo Nome",
-      contactFormEmail: "La Tua Email",
-      contactFormMessage: "Il Tuo Messaggio",
+      contactFormName: "Nome",
+      contactFormEmail: "Email",
+      contactFormMessage: "Messaggio",
       contactFormSubmit: "Invia Messaggio",
   
       // Footer
-      footerRights: "© 2025 Il Tuo Nome - Tutti i diritti riservati",
+      footerRights: "© 2025 Esteban De Genaro - Tutti i diritti riservati",
       footerDesigned: "Progettato con ❤️ da Esteban",
   
       // Blog Posts
-      post1Title: "Tendenze di Web Design per il 2025",
+      post1Title: "Architettura Multi-Cloud: Strategie per il 2025",
       post1Date: "4 Maggio, 2025",
-      post1Category: "Categoria: Design",
-      post1Author: "Di: Il Tuo Nome",
+      post1Category: "Categoria: Cloud",
+      post1Author: "Di: Esteban",
       post1Excerpt:
-        "Scopri le ultime tendenze nel web design che stanno rivoluzionando il settore quest'anno. Dai design minimalisti alle esperienze immersive...",
+        "Scopri le migliori pratiche per implementare architetture multi-cloud che sfruttano i punti di forza di AWS, Azure e GCP. Strategie per ottimizzare costi e prestazioni...",
   
-      post2Title: "Come Ottimizzare le Prestazioni del tuo Sito Web",
+      post2Title: "Terraform: Infrastruttura come Codice nella Pratica",
       post2Date: "28 Aprile, 2025",
-      post2Category: "Categoria: Sviluppo",
-      post2Author: "Di: Il Tuo Nome",
+      post2Category: "Categoria: DevOps",
+      post2Author: "Di: Esteban",
       post2Excerpt:
-        "La velocità di caricamento è cruciale per l'esperienza utente e la SEO. In questo articolo, condivido tecniche efficaci per migliorare le prestazioni del tuo sito...",
+        "La gestione dell'infrastruttura come codice è diventata essenziale. In questo articolo, condivido tecniche avanzate per Terraform e come implementare CI/CD per la tua infrastruttura...",
   
-      post3Title: "Il Futuro dello Sviluppo Web con l'IA",
+      post3Title: "IA nel Cloud: Trasformazione delle Operazioni IT",
       post3Date: "15 Aprile, 2025",
-      post3Category: "Categoria: Tecnologia",
-      post3Author: "Di: Il Tuo Nome",
+      post3Category: "Categoria: IA",
+      post3Author: "Di: Esteban",
       post3Excerpt:
-        "L'intelligenza artificiale sta trasformando il modo in cui creiamo siti web. Esplora come gli strumenti di IA stanno rivoluzionando lo sviluppo web...",
+        "L'intelligenza artificiale sta rivoluzionando la gestione delle infrastrutture cloud. Esplora come i servizi di IA di AWS, Azure e GCP stanno ottimizzando le operazioni...",
     },
     en: {
       // Navigation
@@ -413,47 +413,47 @@ function navigateTo(page) {
       blogReadMore: "Read more",
       blogArchiveTitle: "My Blog",
       blogArchiveDescription:
-        "I share my thoughts, experiences, and knowledge about web development, design, and technology.",
+        "I share my thoughts, experiences, and knowledge about cloud computing, infrastructure, and emerging technologies.",
       blogFilterAll: "All",
-      blogFilterDesign: "Design",
-      blogFilterDevelopment: "Development",
-      blogFilterTechnology: "Technology",
+      blogFilterCloud: "Cloud",
+      blogFilterDevOps: "DevOps",
+      blogFilterAI: "AI",
       blogPrev: "← Previous article",
       blogNext: "Next article →",
       blogRelated: "Related articles",
   
       // Contact
       contactTitle: "Contact",
-      contactFormName: "Your Name",
-      contactFormEmail: "Your Email",
-      contactFormMessage: "Your Message",
+      contactFormName: "Name",
+      contactFormEmail: "Email",
+      contactFormMessage: "Message",
       contactFormSubmit: "Send Message",
   
       // Footer
-      footerRights: "© 2025 Your Name - All rights reserved",
+      footerRights: "© 2025 Esteban De Genaro - All rights reserved",
       footerDesigned: "Designed with ❤️ by Esteban",
   
       // Blog Posts
-      post1Title: "Web Design Trends for 2025",
+      post1Title: "Multi-Cloud Architecture: Strategies for 2025",
       post1Date: "May 4, 2025",
-      post1Category: "Category: Design",
-      post1Author: "By: Your Name",
+      post1Category: "Category: Cloud",
+      post1Author: "By: Esteban",
       post1Excerpt:
-        "Discover the latest trends in web design that are revolutionizing the industry this year. From minimalist designs to immersive experiences...",
+        "Discover best practices for implementing multi-cloud architectures that leverage the strengths of AWS, Azure, and GCP. Strategies to optimize costs and performance...",
   
-      post2Title: "How to Optimize Your Website Performance",
+      post2Title: "Terraform: Infrastructure as Code in Practice",
       post2Date: "April 28, 2025",
-      post2Category: "Category: Development",
-      post2Author: "By: Your Name",
+      post2Category: "Category: DevOps",
+      post2Author: "By: Esteban",
       post2Excerpt:
-        "Loading speed is crucial for user experience and SEO. In this article, I share effective techniques to improve your site's performance...",
+        "Infrastructure as code management has become essential. In this article, I share advanced techniques for Terraform and how to implement CI/CD for your infrastructure...",
   
-      post3Title: "The Future of Web Development with AI",
+      post3Title: "AI in the Cloud: Transforming IT Operations",
       post3Date: "April 15, 2025",
-      post3Category: "Category: Technology",
-      post3Author: "By: Your Name",
+      post3Category: "Category: AI",
+      post3Author: "By: Esteban",
       post3Excerpt:
-        "Artificial intelligence is transforming how we create websites. Explore how AI-powered tools are revolutionizing web development...",
+        "Artificial intelligence is revolutionizing cloud infrastructure management. Explore how AI services from AWS, Azure, and GCP are optimizing operations...",
     },
   }
   
@@ -556,9 +556,9 @@ function navigateTo(page) {
       const filterButtons = document.querySelectorAll(".filter-btn")
       if (filterButtons.length >= 4) {
         filterButtons[0].textContent = t.blogFilterAll
-        filterButtons[1].textContent = t.blogFilterDesign
-        filterButtons[2].textContent = t.blogFilterDevelopment
-        filterButtons[3].textContent = t.blogFilterTechnology
+        filterButtons[1].textContent = t.blogFilterCloud
+        filterButtons[2].textContent = t.blogFilterDevOps
+        filterButtons[3].textContent = t.blogFilterAI
       }
   
       // Actualizar tarjetas de blog en la página de archivo
@@ -569,24 +569,26 @@ function navigateTo(page) {
   
         // Identificar qué post es basado en el título o categoría
         if (
-          title.includes("Tendencias") ||
-          title.includes("Trends") ||
-          title.includes("Tendenze") ||
-          category === "design"
+          title.includes("Arquitectura") ||
+          title.includes("Architecture") ||
+          title.includes("Architettura") ||
+          category === "cloud" && title.includes("Multi-Cloud")
         ) {
           card.querySelector(".blog-title").textContent = t.post1Title
           card.querySelector(".blog-date").textContent = t.post1Date
           card.querySelector(".blog-excerpt").textContent = t.post1Excerpt
         } else if (
-          title.includes("Optimizar") ||
-          title.includes("Optimize") ||
-          title.includes("Ottimizzare") ||
-          category === "development"
+          title.includes("Terraform") ||
+          category === "devops"
         ) {
           card.querySelector(".blog-title").textContent = t.post2Title
           card.querySelector(".blog-date").textContent = t.post2Date
           card.querySelector(".blog-excerpt").textContent = t.post2Excerpt
-        } else if (title.includes("IA") || title.includes("AI") || category === "technology") {
+        } else if (
+          title.includes("IA") || 
+          title.includes("AI") || 
+          category === "ai"
+        ) {
           card.querySelector(".blog-title").textContent = t.post3Title
           card.querySelector(".blog-date").textContent = t.post3Date
           card.querySelector(".blog-excerpt").textContent = t.post3Excerpt
@@ -619,28 +621,28 @@ function navigateTo(page) {
           postCategory = t.post3Category
           postAuthor = t.post3Author
         }
-  
+
         // Actualizar encabezado del post
         postPage.querySelector(".post-title").textContent = postTitle
-  
+
         const metaSpans = postPage.querySelectorAll(".post-meta span")
         if (metaSpans.length >= 3) {
           metaSpans[0].textContent = postDate
           metaSpans[1].textContent = postCategory
           metaSpans[2].textContent = postAuthor
         }
-  
+
         // Actualizar navegación de posts
         const prevLink = postPage.querySelector(".post-nav-link.prev")
         const nextLink = postPage.querySelector(".post-nav-link.next")
-  
+
         if (prevLink) prevLink.textContent = t.blogPrev
         if (nextLink) nextLink.textContent = t.blogNext
-  
+
         // Actualizar artículos relacionados
         const relatedTitle = postPage.querySelector(".related-posts h3")
         if (relatedTitle) relatedTitle.textContent = t.blogRelated
-  
+
         // Actualizar enlaces "Leer más" en artículos relacionados
         postPage.querySelectorAll(".related-posts .blog-link").forEach((link) => {
           link.textContent = t.blogReadMore
@@ -683,4 +685,3 @@ function navigateTo(page) {
     // Aplicar el idioma
     changeLanguage(savedLanguage)
   })
-  
