@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteban De Genaro</title>
+    <link rel="stylesheet" href="https://site-rho-teal.vercel.app/estilos.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Partículas de fondo -->
+        <canvas class="particles" id="particles"></canvas>
+        
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <a href="#" class="logo" onclick="navigateTo('home')">Esteban De Genaro</a>
+            <div class="nav-links">
+                <a href="#" onclick="navigateTo('home')" class="nav-link active" data-page="home">Inicio</a>
+                <a href="#" onclick="navigateTo('about')" class="nav-link" data-page="about">Sobre Mí</a>
+                <a href="#" onclick="navigateTo('blog')" class="nav-link" data-page="blog">Blog</a>
+                <a href="#" onclick="navigateTo('contact')" class="nav-link" data-page="contact">Contacto</a>
+                <div class="language-selector">
+                    <button class="language-btn active" data-lang="es" title="Español">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="20" height="15">
+                            <path fill="#c60b1e" d="M0 0h640v480H0z"/>
+                            <path fill="#ffc400" d="M0 120h640v240H0z"/>
+                        </svg>
+                    </button>
+                    <button class="language-btn" data-lang="it" title="Italiano">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="20" height="15">
+                            <path fill="#fff" d="M0 0h640v480H0z"/>
+                            <path fill="#009246" d="M0 0h213.3v480H0z"/>
+                            <path fill="#ce2b37" d="M426.7 0H640v480H426.7z"/>
+                        </svg>
+                    </button>
+                    <button class="language-btn" data-lang="en" title="English">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="20" height="15">
+                            <path fill="#012169" d="M0 0h640v480H0z"/>
+                            <path fill="#FFF" d="M75 0l244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/>
+                            <path fill="#C8102E" d="M424 281l216 159v40L369 281h55zm-184 20l6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"/>
+                            <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z"/>
+                            <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="menu-btn">☰</div>
+        </nav>
+
+        <!-- Botón volver arriba -->
+        <a href="#" class="back-to-top" id="backToTop">↑</a>
+        
+        <!-- PÁGINA PRINCIPAL -->
+        <div class="page active" id="home-page">
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+                <div class="hero-bg"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title fade-in-up">Hola, soy <span>Esteban :)</span></h1>
+                    <p class="hero-subtitle fade-in-up delay-1">Cloud Engineer & Web Developer</p>
+                    <div class="hero-buttons fade-in-up delay-3">
+                        <a href="#" onclick="navigateTo('blog')" class="btn btn-primary">Blog</a>
+                        <a href="#" onclick="navigateTo('contact')" class="btn btn-secondary">Contactar</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sobre Mí -->
+            <section id="about">
+                <h2 class="section-title">Sobre Mí</h2>
+                <div class="about">
+                    <div class="about-img">
+                        <img src="https://site-rho-teal.vercel.app/photo_pic.jpg?height=600&width=600" alt="Mi foto">
+                    </div>
+                    <div class="about-content">
+                        <h3>Conóceme un poco más</h3>
+                        <p>
+                            Profesional italo-argentino con más de 15 años de experiencia en entornos corporativos multinacionales. A lo largo de mi trayectoria, he trabajado en proyectos críticos sobre infraestructuras on-premise, cloud e híbridas, aportando soluciones sólidas en contextos de alta exigencia tecnológica y organizacional.
+                        </p>
+                        <p>
+                            Mi especialización se centra en la arquitectura de sistemas, gestión de entornos híbridos, modernización de infraestructuras y migraciones a la nube. Combinando una visión estratégica con capacidades técnicas, he contribuido a optimizar operaciones, mejorar la resiliencia de los sistemas y facilitar procesos de transformación digital.
+                        </p>
+                        <p>
+                            Me destaco por un enfoque proactivo, orientado a resultados y basado en buenas prácticas, trabajando de forma colaborativa con equipos multidisciplinarios. Mi objetivo es seguir aportando valor a través de la innovación tecnológica, la mejora continua y la alineación entre IT y negocio.
+                        </p>                        
+                        <div class="skills">
+                            <div class="skill-tag">AWS</div>
+                            <div class="skill-tag">Azure</div>
+                            <div class="skill-tag">GCP</div>
+                            <div class="skill-tag">OCI</div>
+                            <div class="skill-tag">Docker / EKS</div>
+                            <div class="skill-tag">SQL / NoSQL</div>
+                            <div class="skill-tag">Windows / Linux</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Blog Preview -->
+            <section id="blog-preview" class="blog-section">
+                <h2 class="section-title">Últimas Publicaciones</h2>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <img src="/placeholder.svg?height=300&width=500" alt="Blog 1" class="blog-img">
+                        <div class="blog-content">
+                            <p class="blog-date">4 Mayo, 2025</p>
+                            <h3 class="blog-title">Tendencias de Diseño Web para 2025</h3>
+                            <p class="blog-excerpt">Descubre las últimas tendencias en diseño web que están revolucionando la industria este año. Desde diseños minimalistas hasta experiencias inmersivas...</p>
+                            <a href="#" onclick="navigateToBlogPost('post1')" class="btn btn-primary blog-link">Leer más</a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card">
+                        <img src="/placeholder.svg?height=300&width=500" alt="Blog 2" class="blog-img">
+                        <div class="blog-content">
+                            <p class="blog-date">28 Abril, 2025</p>
+                            <h3 class="blog-title">Cómo Optimizar el Rendimiento de tu Sitio Web</h3>
+                            <p class="blog-excerpt">La velocidad de carga es crucial para la experiencia del usuario y el SEO. En este artículo, comparto técnicas efectivas para mejorar el rendimiento de tu sitio...</p>
+                            <a href="#" onclick="navigateToBlogPost('post2')" class="btn btn-primary blog-link">Leer más</a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card">
+                        <img src="/placeholder.svg?height=300&width=500" alt="Blog 3" class="blog-img">
+                        <div class="blog-content">
+                            <p class="blog-date">15 Abril, 2025</p>
+                            <h3 class="blog-title">El Futuro del Desarrollo Web con IA</h3>
+                            <p class="blog-excerpt">La inteligencia artificial está transformando la forma en que creamos sitios web. Explora cómo las herramientas de IA están revolucionando el desarrollo web...</p>
+                            <a href="#" onclick="navigateToBlogPost('post3')" class="btn btn-primary blog-link">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="#" onclick="navigateTo('blog')" class="btn btn-secondary">Ver todas las publicaciones</a>
+                </div>
+            </section>
+            
+            <!-- Contacto -->
+            <section id="contact">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <input type="text" placeholder="Tu Nombre" required>
+                            <input type="email" placeholder="Tu Email" required>
+                            <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- PÁGINA DE BLOG (ARCHIVO) -->
+        <div class="page" id="blog-page">
+            <div class="blog-archive">
+                <div class="archive-header">
+                    <h1 class="archive-title">Mi Blog</h1>
+                    <p class="archive-description">Comparto mis pensamientos, experiencias y conocimientos sobre desarrollo web, diseño y tecnología.</p>
+                </div>
+                
+                <div class="archive-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="design">Diseño</button>
+                    <button class="filter-btn" data-filter="development">Desarrollo</button>
+                    <button class="filter-btn" data-filter="technology">Tecnología</button>
+                </div>
+                
+                <div class="blog-grid">
+                    <div class="blog-card" data-category="design">
+                        <img src="/placeholder.svg?height=300&width=500" alt="Blog 1" class="blog-img">
+                        <div class="blog-content">
+                            <p class="blog-date">4 Mayo, 2025</p>
+                            <h3 class="blog-title">Tendencias de Diseño Web para 2025</h3>
+                            <p class="blog-excerpt">Descubre las últimas tendencias en diseño web que están revolucionando la industria este año. Desde diseños minimalistas hasta experiencias inmersivas...</p>
+                            <a href="#" onclick="navigateToBlogPost('post1')" class="btn btn-primary blog-link">Leer más</a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card" data-category="development">
+                        <img src="/placeholder.svg?height=300&width=500" alt="Blog 2" class="blog-img">
+                        <div class="blog-content">
+                            <p class="blog-date">28 Abril, 2025</p>
+                            <h3 class="blog-title">Cómo Optimizar el Rendimiento de tu Sitio Web</h3>
+                            <p class="blog-excerpt">La velocidad de carga es crucial para la experiencia del usuario y el SEO. En este artículo, comparto técnicas efectivas para mejorar el rendimiento de tu sitio...</p>
+                            <a href="#" onclick="navigateToBlogPost('post2')" class="btn btn-primary blog-link">Leer más</a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card" data-category="technology">
+                        <img src="/placeholder.svg?height=300&width=500" alt="Blog 3" class="blog-img">
+                        <div class="blog-content">
+                            <p class="blog-date">15 Abril, 2025</p>
+                            <h3 class="blog-title">El Futuro del Desarrollo Web con IA</h3>
+                            <p class="blog-excerpt">La inteligencia artificial está transformando la forma en que creamos sitios web. Explora cómo las herramientas de IA están revolucionando el desarrollo web...</p>
+                            <a href="#" onclick="navigateToBlogPost('post3')" class="btn btn-primary blog-link">Leer más</a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card" data-category="design">
+                        <img src="/placeholder.svg?height=300&width=500" alt="Blog 4" class="blog-img">
+                        <div class="blog-content">
+                            <p class="blog-date">5 Abril, 2025</p>
+                            <h3 class="blog-title">Psicología del Color en el Diseño Web</h3>
+                            <p class="blog-excerpt">El color tiene un impacto profundo en cómo los usuarios perciben tu sitio web. Aprende a utilizar la psicología del color para mejorar la experiencia del usuario...</p>
+                            <a href="#" onclick="navigateToBlogPost('post4')" class="btn btn-primary blog-link">Leer más</a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card" data-category="development">
+                        <img src="/placeholder.svg?height=300&width=500" alt="Blog 5" class="blog-img">
+                        <div class="blog-content">
+                            <p class="blog-date">28 Marzo, 2025</p>
+                            <h3 class="blog-title">Guía Completa de CSS Grid</h3>
+                            <p class="blog-excerpt">CSS Grid ha revolucionado la forma en que diseñamos layouts. En esta guía completa, te muestro cómo aprovechar al máximo esta poderosa herramienta...</p>
+                            <a href="#" onclick="navigateToBlogPost('post5')" class="btn btn-primary blog-link">Leer más</a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card" data-category="technology">
+                        <img src="/placeholder.svg?height=300&width=500" alt="Blog 6" class="blog-img">
+                        <div class="blog-content">
+                            <p class="blog-date">15 Marzo, 2025</p>
+                            <h3 class="blog-title">Web3 y el Futuro de Internet</h3>
+                            <p class="blog-excerpt">La Web3 promete transformar internet tal como lo conocemos. Descubre qué es, cómo funciona y por qué es importante para los desarrolladores web...</p>
+                            <a href="#" onclick="navigateToBlogPost('post6')" class="btn btn-primary blog-link">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PÁGINAS DE BLOG INDIVIDUALES -->
+        <!-- Blog Post 1 -->
+        <div class="page" id="post1-page">
+            <div class="blog-post">
+                <article>
+                    <header class="post-header">
+                        <h1 class="post-title">Tendencias de Diseño Web para 2025</h1>
+                        <div class="post-meta">
+                            <span>4 Mayo, 2025</span>
+                            <span>Categoría: Diseño</span>
+                            <span>Por: Tu Nombre</span>
+                        </div>
+                    </header>
+                    
+                    <img src="/placeholder.svg?height=600&width=1200" alt="Tendencias de Diseño Web" class="post-featured-img">
+                    
+                    <div class="post-content">
+                        <p>El diseño web está en constante evolución, adaptándose a las nuevas tecnologías, preferencias de los usuarios y tendencias estéticas. En 2025, estamos viendo una convergencia fascinante de minimalismo, funcionalidad y experiencias inmersivas que están redefiniendo cómo interactuamos con los sitios web.</p>
+                        
+                        <h2>1. Minimalismo 2.0</h2>
+                        <p>El minimalismo sigue siendo una tendencia dominante, pero ha evolucionado. Ya no se trata solo de espacios en blanco y diseños simples. El Minimalismo 2.0 combina la simplicidad con elementos interactivos sutiles, microinteracciones y toques de color estratégicos que guían la atención del usuario sin abrumar la interfaz.</p>
+                        
+                        <h2>2. Diseño Inmersivo</h2>
+                        <p>Con el avance de las tecnologías web, los diseños inmersivos están ganando popularidad. Estos incorporan elementos 3D, parallax avanzado, y experiencias interactivas que responden al movimiento del usuario. El objetivo es crear una conexión más profunda entre el usuario y el contenido.</p>
+                        
+                        <h2>3. Modo Oscuro como Estándar</h2>
+                        <p>El modo oscuro ha pasado de ser una característica opcional a un estándar de diseño. Además de reducir la fatiga visual y ahorrar batería en dispositivos móviles, los temas oscuros ofrecen oportunidades creativas para destacar elementos clave con contrastes dramáticos.</p>
+                        
+                        <h2>4. Tipografía Experimental</h2>
+                        <p>Las fuentes personalizadas y experimentales están tomando protagonismo. Los diseñadores están utilizando tipografías únicas como elemento central del diseño, con tamaños variables, animaciones y disposiciones no convencionales que desafían las normas tradicionales.</p>
+                        
+                        <h2>5. Neomorfismo Evolucionado</h2>
+                        <p>El neomorfismo, que combina elementos del skeuomorfismo y el diseño plano, ha evolucionado para ofrecer interfaces que parecen tangibles sin sacrificar la usabilidad. Esta tendencia crea elementos de interfaz que parecen emerger de la propia superficie de la pantalla.</p>
+                        
+                        <h2>Conclusión</h2>
+                        <p>El diseño web en 2025 se centra en crear experiencias memorables que equilibran la estética con la funcionalidad. Los diseñadores están encontrando formas innovadoras de sorprender a los usuarios mientras mantienen la usabilidad y la accesibilidad como prioridades. Adoptar estas tendencias puede ayudarte a crear sitios web que no solo se vean contemporáneos, sino que también ofrezcan experiencias significativas a tus usuarios.</p>
+                    </div>
+                    
+                    <div class="post-navigation">
+                        <a href="#" onclick="navigateToBlogPost('post3')" class="post-nav-link prev">← Artículo anterior</a>
+                        <a href="#" onclick="navigateToBlogPost('post2')" class="post-nav-link next">Artículo siguiente →</a>
+                    </div>
+                    
+                    <div class="related-posts">
+                        <h3>Artículos relacionados</h3>
+                        <div class="blog-grid">
+                            <div class="blog-card">
+                                <img src="/placeholder.svg?height=300&width=500" alt="Blog relacionado 1" class="blog-img">
+                                <div class="blog-content">
+                                    <p class="blog-date">5 Abril, 2025</p>
+                                    <h3 class="blog-title">Psicología del Color en el Diseño Web</h3>
+                                    <a href="#" onclick="navigateToBlogPost('post4')" class="btn btn-primary blog-link">Leer más</a>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-card">
+                                <img src="/placeholder.svg?height=300&width=500" alt="Blog relacionado 2" class="blog-img">
+                                <div class="blog-content">
+                                    <p class="blog-date">28 Marzo, 2025</p>
+                                    <h3 class="blog-title">Guía Completa de CSS Grid</h3>
+                                    <a href="#" onclick="navigateToBlogPost('post5')" class="btn btn-primary blog-link">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+        <!-- Blog Post 2 -->
+        <div class="page" id="post2-page">
+            <div class="blog-post">
+                <article>
+                    <header class="post-header">
+                        <h1 class="post-title">Cómo Optimizar el Rendimiento de tu Sitio Web</h1>
+                        <div class="post-meta">
+                            <span>28 Abril, 2025</span>
+                            <span>Categoría: Desarrollo</span>
+                            <span>Por: Tu Nombre</span>
+                        </div>
+                    </header>
+                    
+                    <img src="/placeholder.svg?height=600&width=1200" alt="Optimización de Rendimiento Web" class="post-featured-img">
+                    
+                    <div class="post-content">
+                        <p>La velocidad de carga de un sitio web es uno de los factores más importantes para el éxito online. Un sitio lento no solo frustra a los usuarios, sino que también afecta negativamente al SEO y las conversiones. En este artículo, compartiré técnicas efectivas para optimizar el rendimiento de tu sitio web.</p>
+                        
+                        <h2>1. Optimización de Imágenes</h2>
+                        <p>Las imágenes suelen ser los elementos más pesados de un sitio web. Optimizarlas correctamente puede reducir drásticamente los tiempos de carga:</p>
+                        <ul>
+                            <li>Utiliza formatos modernos como WebP o AVIF</li>
+                            <li>Implementa carga perezosa (lazy loading)</li>
+                            <li>Sirve imágenes responsivas con srcset</li>
+                            <li>Comprime imágenes sin perder calidad visible</li>
+                        </ul>
+                        
+                        <h2>2. Minificación y Compresión</h2>
+                        <p>Reducir el tamaño de tus archivos CSS, JavaScript y HTML puede mejorar significativamente los tiempos de carga:</p>
+                        <ul>
+                            <li>Minifica tus archivos eliminando espacios, comentarios y caracteres innecesarios</li>
+                            <li>Habilita la compresión GZIP o Brotli en tu servidor</li>
+                            <li>Combina archivos CSS y JavaScript cuando sea posible</li>
+                        </ul>
+                        
+                        <h2>3. Aprovecha el Caché del Navegador</h2>
+                        <p>Configurar correctamente el caché del navegador permite que los visitantes recurrentes carguen tu sitio mucho más rápido:</p>
+                        <ul>
+                            <li>Establece encabezados de caché apropiados</li>
+                            <li>Utiliza versiones o hashes en los nombres de archivos para invalidar el caché cuando sea necesario</li>
+                            <li>Considera implementar un service worker para experiencias offline</li>
+                        </ul>
+                        
+                        <h2>4. Optimiza el Renderizado</h2>
+                        <p>Mejorar cómo se renderiza tu sitio puede tener un gran impacto en la percepción de velocidad:</p>
+                        <ul>
+                            <li>Elimina JavaScript que bloquee el renderizado</li>
+                            <li>Prioriza el contenido visible (above the fold)</li>
+                            <li>Considera técnicas como el renderizado del lado del servidor (SSR) o la generación estática</li>
+                            <li>Optimiza el Critical Rendering Path</li>
+                        </ul>
+                        
+                        <h2>5. Utiliza CDN</h2>
+                        <p>Una Red de Distribución de Contenido (CDN) puede reducir drásticamente la latencia sirviendo tu contenido desde servidores más cercanos a tus usuarios:</p>
+                        <ul>
+                            <li>Distribuye activos estáticos a través de un CDN</li>
+                            <li>Considera un CDN con funciones de optimización automática</li>
+                            <li>Implementa HTTP/2 o HTTP/3 para conexiones más eficientes</li>
+                        </ul>
+                        
+                        <h2>Conclusión</h2>
+                        <p>Optimizar el rendimiento de tu sitio web no es una tarea única, sino un proceso continuo. Utiliza herramientas como Lighthouse, WebPageTest o PageSpeed Insights para medir tu progreso y descubrir áreas de mejora. Recuerda que cada milisegundo cuenta cuando se trata de retener usuarios y mejorar conversiones.</p>
+                    </div>
+                    
+                    <div class="post-navigation">
+                        <a href="#" onclick="navigateToBlogPost('post1')" class="post-nav-link prev">← Artículo anterior</a>
+                        <a href="#" onclick="navigateToBlogPost('post3')" class="post-nav-link next">Artículo siguiente →</a>
+                    </div>
+                    
+                    <div class="related-posts">
+                        <h3>Artículos relacionados</h3>
+                        <div class="blog-grid">
+                            <div class="blog-card">
+                                <img src="/placeholder.svg?height=300&width=500" alt="Blog relacionado 1" class="blog-img">
+                                <div class="blog-content">
+                                    <p class="blog-date">28 Marzo, 2025</p>
+                                    <h3 class="blog-title">Guía Completa de CSS Grid</h3>
+                                    <a href="#" onclick="navigateToBlogPost('post5')" class="btn btn-primary blog-link">Leer más</a>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-card">
+                                <img src="/placeholder.svg?height=300&width=500" alt="Blog relacionado 2" class="blog-img">
+                                <div class="blog-content">
+                                    <p class="blog-date">15 Marzo, 2025</p>
+                                    <h3 class="blog-title">Web3 y el Futuro de Internet</h3>
+                                    <a href="#" onclick="navigateToBlogPost('post6')" class="btn btn-primary blog-link">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+        <!-- Blog Post 3 -->
+        <div class="page" id="post3-page">
+            <div class="blog-post">
+                <article>
+                    <header class="post-header">
+                        <h1 class="post-title">El Futuro del Desarrollo Web con IA</h1>
+                        <div class="post-meta">
+                            <span>15 Abril, 2025</span>
+                            <span>Categoría: Tecnología</span>
+                            <span>Por: Tu Nombre</span>
+                        </div>
+                    </header>
+                    
+                    <img src="/placeholder.svg?height=600&width=1200" alt="IA en Desarrollo Web" class="post-featured-img">
+                    
+                    <div class="post-content">
+                        <p>La inteligencia artificial está transformando rápidamente la forma en que diseñamos y desarrollamos sitios web. Lo que antes requería semanas de codificación manual ahora puede realizarse en horas o incluso minutos con la ayuda de herramientas impulsadas por IA. Exploremos cómo esta revolución está cambiando el panorama del desarrollo web.</p>
+                        
+                        <h2>1. Generación de Código Asistida por IA</h2>
+                        <p>Los asistentes de codificación impulsados por IA como GitHub Copilot, Tabnine y otros están transformando la forma en que los desarrolladores escriben código. Estas herramientas pueden:</p>
+                        <ul>
+                            <li>Sugerir bloques completos de código basados en comentarios en lenguaje natural</li>
+                            <li>Autocompletar funciones y métodos mientras escribes</li>
+                            <li>Detectar y corregir errores en tiempo real</li>
+                            <li>Refactorizar código existente para mejorar su eficiencia</li>
+                        </ul>
+
+                        <h2>2. Diseño Web Generativo</h2>
+                        <p>Las herramientas de diseño generativo están revolucionando el proceso creativo:</p>
+                        <ul>
+                            <li>Generación de layouts completos basados en descripciones textuales</li>
+                            <li>Creación de paletas de colores armoniosas y accesibles</li>
+                            <li>Producción de imágenes y gráficos personalizados sin necesidad de diseñadores</li>
+                            <li>Adaptación automática de diseños para diferentes dispositivos y tamaños de pantalla</li>
+                        </ul>
+
+                        <h2>3. Personalización Impulsada por IA</h2>
+                        <p>La IA está llevando la personalización web a un nuevo nivel:</p>
+                        <ul>
+                            <li>Experiencias de usuario adaptadas en tiempo real según el comportamiento</li>
+                            <li>Recomendaciones de contenido altamente relevantes</li>
+                            <li>Interfaces que se adaptan a las preferencias individuales de cada usuario</li>
+                            <li>Pruebas A/B automatizadas que optimizan continuamente la experiencia</li>
+                        </ul>
+
+                        <h2>4. Desarrollo Sin Código (No-Code) y Bajo Código (Low-Code)</h2>
+                        <p>Las plataformas potenciadas por IA están democratizando el desarrollo web:</p>
+                        <ul>
+                            <li>Creación de aplicaciones complejas sin escribir una sola línea de código</li>
+                            <li>Interfaces de arrastrar y soltar que generan código limpio y optimizado</li>
+                            <li>Integración automática con APIs y servicios de terceros</li>
+                            <li>Mantenimiento y actualizaciones simplificadas</li>
+                        </ul>
+
+                        <h2>5. Accesibilidad Mejorada</h2>
+                        <p>La IA está ayudando a crear web más inclusivas:</p>
+                        <ul>
+                            <li>Detección automática de problemas de accesibilidad</li>
+                            <li>Generación de textos alternativos para imágenes</li>
+                            <li>Ajustes de contraste y legibilidad en tiempo real</li>
+                            <li>Traducción y adaptación de contenido para audiencias globales</li>
+                        </ul>
+
+                        <h2>Desafíos y Consideraciones Éticas</h2>
+                        <p>A pesar de sus beneficios, la IA en el desarrollo web plantea importantes cuestiones:</p>
+                        <ul>
+                            <li>Dependencia excesiva que podría erosionar habilidades fundamentales</li>
+                            <li>Preocupaciones sobre la privacidad de los datos utilizados para entrenar modelos</li>
+                            <li>Posibles sesgos incorporados en las soluciones generadas</li>
+                            <li>Cuestiones de propiedad intelectual en el código generado por IA</li>
+                        </ul>
+
+                        <h2>Conclusión</h2>
+                        <p>La IA no está reemplazando a los desarrolladores web, sino transformando su rol. Los profesionales que aprendan a colaborar eficazmente con estas herramientas podrán crear experiencias web más sofisticadas, accesibles y personalizadas en menos tiempo. El futuro del desarrollo web será una asociación creativa entre humanos e inteligencia artificial.</p>
+                    </div>
+                    
+                    <div class="post-navigation">
+                        <a href="#" onclick="navigateToBlogPost('post2')" class="post-nav-link prev">← Artículo anterior</a>
+                        <a href="#" onclick="navigateToBlogPost('post4')" class="post-nav-link next">Artículo siguiente →</a>
+                    </div>
+                    
+                    <div class="related-posts">
+                        <h3>Artículos relacionados</h3>
+                        <div class="blog-grid">
+                            <div class="blog-card">
+                                <img src="/placeholder.svg?height=300&width=500" alt="Blog relacionado 1" class="blog-img">
+                                <div class="blog-content">
+                                    <p class="blog-date">15 Marzo, 2025</p>
+                                    <h3 class="blog-title">Web3 y el Futuro de Internet</h3>
+                                    <a href="#" onclick="navigateToBlogPost('post6')" class="btn btn-primary blog-link">Leer más</a>
+                                </div>
+                            </div>
+                            
+                            <div class="blog-card">
+                                <img src="/placeholder.svg?height=300&width=500" alt="Blog relacionado 2" class="blog-img">
+                                <div class="blog-content">
+                                    <p class="blog-date">4 Mayo, 2025</p>
+                                    <h3 class="blog-title">Tendencias de Diseño Web para 2025</h3>
+                                    <a href="#" onclick="navigateToBlogPost('post1')" class="btn btn-primary blog-link">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">Esteban De Genaro</div>
+                <div class="footer-links">
+                    <a href="#" onclick="navigateTo('home')">Inicio</a>
+                    <a href="#" onclick="navigateTo('about')">Sobre Mí</a>
+                    <a href="#" onclick="navigateTo('blog')">Blog</a>
+                    <a href="#" onclick="navigateTo('contact')">Contacto</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 Esteban De Genaro - Todos los derechos reservados</p>
+                    <p>Diseñado con ❤️ por Esteban</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://site-rho-teal.vercel.app/index.js" defer></script>
+</body>
+</html>
